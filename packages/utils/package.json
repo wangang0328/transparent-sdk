@@ -1,0 +1,24 @@
+{
+  "name": "@wa-dev/transparent-sdk-utils",
+  "version": "1.0.0",
+  "filename": "transparent-utils",
+  "description": "sdk tools",
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "buildOptions": {
+    "name": "TransparentUtils",
+    "filename": "transparent-sdk-utils",
+    "format": [
+      "esm",
+      "cjs",
+      "umd"
+    ]
+  }
+}

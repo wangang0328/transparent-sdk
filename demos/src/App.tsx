@@ -1,12 +1,71 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+import axios from 'axios'
 import './App.css'
-import { createClient } from '@wa-dev/transparent-sdk-browser'
+try {
+  setTimeout(() => {
+    throw new Error('自定义错误')
+  }, 1000)
+} catch (error) {
+  console.log('catch---error', error)
+}
 
-const client = createClient({})
+// axios.post('http://localhost:3000/test', { hello: 'baby' })
+//   .then(response => {
+//     const date = response.headers.date;
+//     console.log('date----------', date);
+//   })
+//   .catch(error => {
+//     console.error(error);
+//   });
 
-console.log('client===', client)
+// let type = window.navigator.connection.effectiveType;
+// console.log('network----type', type, navigator.connection)
+// function updateConnectionStatus() {
+//   console.log(
+//     `Connection type changed from ${type} to ${navigator.connection.effectiveType}`,
+//   );
+//   type = navigator.connection.effectiveType;
+// }
+
+// navigator.connection.addEventListener("change", updateConnectionStatus);
+
+// navigator.connection.addEventListener('change', e => {
+//   console.log('eeee', e)
+// });
+
+const sendByXHR = () => {
+  return new Promise((resolve, reject) => {
+    // const XMLHttpRequest = window.oXMLHttpRequest || window.XMLHttpRequest
+    const xhr = new XMLHttpRequest()
+    
+    const onLoadFn = () => {
+      xhr.removeEventListener('loadend', onLoadFn)
+      // console.log('--sendByXHR--', data)
+      // xhr 如果请求失败 status 的值是0
+      if (xhr.status >= 400 || xhr.status === 0) {
+        reject('')
+      } else {
+        resolve('')
+      }
+    }
+    // text/plain;charset=UTF-8
+    xhr.addEventListener('loadend', onLoadFn)
+    xhr.open('POST', 'http://localhost:3000/test', true)
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.send(JSON.stringify({hello: 'baby'}))
+  })
+}
+sendByXHR()
+
+declare global {
+  interface Navigator {
+    connection: any
+  }
+}
+
+
 function App() {
   const [count, setCount] = useState(0)
 
