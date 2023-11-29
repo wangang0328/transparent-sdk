@@ -38,7 +38,7 @@ const resolveDist = (p) => path.resolve(distDir, p)
 // 定义输出类型对应的编译项
 const outuptConfig = {
   esm: {
-    dir: resolveDist(`${name}/es`),
+    dir: resolve('dist/es'),
     // name: 'TransparentClient',
     format: 'esm',
     // 保留模块结构
@@ -47,12 +47,12 @@ const outuptConfig = {
     preserveModulesRoot: resolveDist(`${name}/es/browser/src`)
   },
   umd: {
-    dir: resolveDist(`${name}/dist`),
+    dir: resolve('dist/umd'),
     name: buildOptons.name || name,
     format: 'umd'
   },
   cjs: {
-    dir: resolveDist(`${name}/lib`),
+    dir: resolve('dist/lib'),
     // name: 'TransparentClient',
     format: 'cjs'
   }
@@ -63,6 +63,7 @@ const createConfig = (format, output, plugins) => {
   // const shouldEmitDeclarations = !!pkg.types
   // 是否压缩 TODO：
   const minifyPlugin = format === 'en' ? [terser()] : []
+
   return {
     input: resolve('src/index.ts'),
     output,
