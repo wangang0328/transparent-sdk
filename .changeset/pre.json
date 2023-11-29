@@ -1,0 +1,10 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@wa-dev/transparent-sdk-browser": "0.0.1",
+    "@wa-dev/transparent-sdk-core": "0.0.1",
+    "@wa-dev/transparent-sdk-utils": "0.0.1"
+  },
+  "changesets": []
+}

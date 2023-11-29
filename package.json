@@ -13,6 +13,10 @@
     "lint": "eslint --ext .js,.ts --quiet ./packages --fix",
     "commit": "git cz",
     "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:pre-alpah": "changeset pre enter alpha",
+    "changeset:pre-beta": "changeset pre enter beta",
+    "changeset:pre-rc": "changeset pre enter rc",
     "publish": "changeset publish --registry=https://registry.npmjs.com/"
   },
   "lint-staged": {
