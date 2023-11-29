@@ -1,6 +1,6 @@
 {
   "name": "@wa-dev/transparent-sdk-browser",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "description": "front-end monitor sdk host is browser",
   "module": "src/index.ts",
   "type": "module",
@@ -15,14 +15,17 @@
   ],
   "scripts": {},
   "dependencies": {
-    "@wa-dev/transparent-sdk-core": "workspace: *",
-    "@wa-dev/transparent-sdk-utils": "workspace: *"
+    "@wa-dev/transparent-sdk-core": "workspace:0.0.2-alpha.0",
+    "@wa-dev/transparent-sdk-utils": "workspace:0.0.2-alpha.0"
   },
   "engines": {
     "node": "^20.9.0 || >18.0.0",
     "pnpm": "^8.10.2 || >8.0.0"
   },
-  "keywords": ["monitor sdk", "typescript"],
+  "keywords": [
+    "monitor sdk",
+    "typescript"
+  ],
   "author": "wa",
   "license": "MIT",
   "buildOptions": {

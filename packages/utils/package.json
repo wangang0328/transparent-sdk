@@ -1,6 +1,6 @@
 {
   "name": "@wa-dev/transparent-sdk-utils",
-  "version": "0.0.1",
+  "version": "0.0.2-alpha.0",
   "filename": "transparent-utils",
   "description": "front-end monitor sdk helpers",
   "module": "src/index.ts",
@@ -15,7 +15,10 @@
     "dist"
   ],
   "scripts": {},
-  "keywords": ["monitor sdk", "typescript"],
+  "keywords": [
+    "monitor sdk",
+    "typescript"
+  ],
   "author": "wa",
   "license": "MIT",
   "engines": {
