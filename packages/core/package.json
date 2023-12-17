@@ -3,7 +3,7 @@
   "version": "0.0.2-alpha.0",
   "description": "front-end monitor sdk core",
   "filename": "transparent-core",
-  "module": "src/index.ts",
+  "module": "./index.ts",
   "type": "module",
   "publishConfig": {
     "main": "dist/lib/index.js",

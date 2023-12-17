@@ -1,10 +1,10 @@
 import { type Config, type SendOptions } from '@wa-dev/transparent-sdk-core'
 import { diffTime } from '@wa-dev/transparent-sdk-utils'
-import { BrowserBuilder } from './BrowserBuilder'
-import { BrowserClient } from './BrowserClient'
-import { BrowserConfigManager } from './BrowserConfigManager'
-import { BrowserSender } from './BrowserSender'
-import { MonitorNavigationPerfPlugin } from './plugins/monitor-navigation-perf-plugin'
+import { BrowserBuilder } from './src/BrowserBuilder'
+import { BrowserClient } from './src/BrowserClient'
+import { BrowserConfigManager } from './src/BrowserConfigManager'
+import { BrowserSender } from './src/BrowserSender'
+import { MonitorNavigationPerfPlugin } from './src/plugins/monitor-navigation-perf-plugin'
 
 interface BrowserConfig extends Config<BrowserClient> {
   senderOptions?: Partial<SendOptions>

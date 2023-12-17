@@ -3,7 +3,7 @@
   "version": "0.0.2-alpha.0",
   "filename": "transparent-utils",
   "description": "front-end monitor sdk helpers",
-  "module": "src/index.ts",
+  "module": "./index.ts",
   "type": "module",
   "publishConfig": {
     "main": "dist/lib/index.js",
